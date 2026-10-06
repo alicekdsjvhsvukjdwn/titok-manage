@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boucle d'Or · TikTok</title>
+  <!-- La feuille de style viendra avec le front-end -->
+</head>
+<body data-account="musique">
+
+  <header>
+    <nav id="tiktok-nav">
+      <a href="index.html">Accueil</a>
+      <a href="tdah.html">TDAH</a>
+      <a href="musique.html" aria-current="page">Boucle d'Or</a>
+      <a href="montages.html">Montages séries</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h1 id="account-name">Boucle d'Or</h1>
+      <p>Découvertes musicales, samples et petits cours.</p>
+    </section>
+
+    <section id="stats" aria-label="Chiffres clés">
+      <div><span data-stat="followers">–</span> abonnés</div>
+      <div><span data-stat="likes">–</span> likes au total</div>
+      <div><span data-stat="videos">–</span> vidéos</div>
+      <div><span data-stat="views">–</span> vues cumulées</div>
+      <div><span data-stat="avg-views">–</span> vues par vidéo (moyenne)</div>
+    </section>
+
+    <section id="actions">
+      <button id="refresh" type="button">Actualiser</button>
+      <span id="status" role="status">Chargement…</span>
+    </section>
+
+    <section id="history" aria-label="Évolution">
+      <!-- Emplacement des graphiques (évolution des vues et des abonnés), à venir -->
+    </section>
+
+    <section id="videos" aria-label="Vidéos">
+      <h2>Vidéos</h2>
+      <table id="videos-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Vidéo</th>
+            <th>Vues</th>
+            <th>Likes</th>
+            <th>Commentaires</th>
+            <th>Partages</th>
+            <th>Durée</th>
+          </tr>
+        </thead>
+        <tbody id="videos-body"></tbody>
+      </table>
+    </section>
+
+    <details id="debug">
+      <summary>Données brutes (JSON)</summary>
+      <pre id="raw"></pre>
+    </details>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="tiktok.js"></script>
+</body>
+</html>
