@@ -82,7 +82,7 @@
       cell(nf.format(v.likes));
       cell(nf.format(v.comments));
       cell(nf.format(v.shares));
-      cell(v.duration != null ? `${v.duration} s` : "–");
+      cell(v.duration ? `${v.duration} s` : "–"); // 0 pour les publications photo
       tbody.appendChild(tr);
     }
   }
